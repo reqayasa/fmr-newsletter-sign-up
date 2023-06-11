@@ -43,6 +43,11 @@ body {
   color: var(--dark-slate-grey);
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Mobile FIrst */
 h1 {
   font-size: calc(39 / 16 * 1rem);
@@ -60,11 +65,14 @@ ul {
   /* margin-left: calc(20 / 16 * 1rem); */
 }
 
-ul > li {
+ul > li{
   list-style: none;
   position: relative;
   padding-left: calc(37 / 16 * 1rem);
+}
 
+ul > li:not(:last-child){
+  padding-bottom: calc(12 / 16 * 1rem);
 }
 
 ul > li::before {
@@ -75,9 +83,9 @@ ul > li::before {
 }
 
 .content {
-  margin-top: calc(49 / 16 * 1rem);
-  margin-left: calc(26 / 16 * 1rem);;
-  margin-right: calc(26 / 16 * 1rem);;
+  margin-top: calc(45 / 16 * 1rem);
+  margin-left: calc(26 / 16 * 1rem);
+  margin-right: calc(26 / 16 * 1rem);
 }
 
 .content form {
@@ -121,7 +129,7 @@ ul > li::before {
 .content form input[type=submit]:hover {
   background: linear-gradient(to left, hsl(15, 100%, 61%), hsl(346, 100%, 66%));
   cursor: pointer;
-  box-shadow: 0px 5px 10px 0px var(--tomate-50);
+  box-shadow: 0 0.25rem 0.5rem 0 var(--tomate-50);
   transition: all 500 ease-out;
 }
 
@@ -129,6 +137,48 @@ ul > li::before {
   background-image: url("../assets/images/illustration-sign-up-mobile.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 284px;
+  min-height: calc(284 / 16 * 1rem);
+}
+
+@media screen and (min-width: calc(450 / 16 * 1rem)) {
+  .content {
+    max-width: calc(450 / 16 * 1rem);
+    margin-inline: auto;
+  }
+}
+
+@media screen and (min-width: calc(1000 / 16 * 1rem)) {
+  body {
+    background-color: var(--dark-slate-grey);
+  }
+  main {
+    flex-direction: row;
+    background-color: var(--white);
+    width: calc(928 / 16 * 1rem);
+    height: calc(640 / 16 * 1rem);
+    border-radius: calc(35 / 16 * 1rem);
+    padding: calc(25 / 16 * 1rem);
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+  }
+  .ilustration {
+    background-image: url("../assets/images/illustration-sign-up-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: calc(400 / 16 * 1rem);
+    min-height: calc(593 / 16 * 1rem);
+    order: 2;
+  }
+
+  .content {
+    order: 1;
+    width:calc(450 / 16 * 1rem);
+    margin-top: calc(74 / 16 * 1rem);
+    margin-left: calc(39 / 16 * 1rem);
+    margin-right: calc(64 / 16 * 1rem);
+  }
+  
 }
 

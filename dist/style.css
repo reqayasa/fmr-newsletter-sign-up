@@ -14,7 +14,8 @@
 
 
 :root {
-  --tomato: hsl(4, 100%, 67%;);
+  --tomato: hsl(4, 100%, 67%);
+  --tomate-50: hsla(4, 100%, 67%, 0.5);
   --dark-slate-grey: hsl(234, 29%, 20%);
   --charcoal-grey: hsl(235, 18%, 26%);
   --grey: hsl(231, 7%, 60%);
@@ -31,6 +32,7 @@ html {
   text-decoration: none;
   padding: 0;
   margin: 0;
+  outline: none;
 }
 
 body {
@@ -90,7 +92,7 @@ ul > li::before {
   padding-bottom: calc(12 / 16 * 1rem);
 }
 
-.content form input[type=text]{
+.content form input[type=text] {
   padding: calc(17 / 16 * 1rem);
   margin-bottom: calc(24 / 16 * 1rem);;
   border: 1px solid var(--grey);
@@ -99,7 +101,13 @@ ul > li::before {
   color: var(--grey);
 }
 
-.content form input[type=submit]{
+.content form input[type=text]:hover {
+  transition: all 500 ease-out;
+  cursor: pointer;
+  border: 1px solid var(--dark-slate-grey);
+}
+
+.content form input[type=submit] {
   padding-top: calc(17 / 16 * 1rem);
   padding-bottom: calc(17 / 16 * 1rem);
   background-color: var(--dark-slate-grey);
@@ -110,9 +118,17 @@ ul > li::before {
   box-shadow: none;
 }
 
-.ilustration > img {
-  display: block;
-  object-fit: cover;
-  width: 100%;
+.content form input[type=submit]:hover {
+  background: linear-gradient(to left, hsl(15, 100%, 61%), hsl(346, 100%, 66%));
+  cursor: pointer;
+  box-shadow: 0px 5px 10px 0px var(--tomate-50);
+  transition: all 500 ease-out;
+}
+
+.ilustration {
+  background-image: url("../assets/images/illustration-sign-up-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 284px;
 }
 

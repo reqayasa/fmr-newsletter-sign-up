@@ -5,35 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="dist/style.css">
+  <script defer type="text/javascript" src="dist/script.js"></script>
   
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
+  <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  </style> -->
 </head>
 <body>
+  <main>  
+    <div class="ilustration">
+      <img src="./assets/images/illustration-sign-up-mobile.svg" alt="illustration sign up mobile">
+    </div>
+    <div class="content">
+      <h1>
+        Stay updated!
+      </h1>
+      <p>
+        Join 60,000+ product managers receiving monthly updates on:
+      </p>
 
-  <!-- Sign-up form start -->
+      <ul>
+        <li>Product discovery and building what matters</li>
+        <li>Measuring to ensure updates are a success</li>
+        <li>And much more!</li>
+      </ul>
 
-  Stay updated!
+      <form action="">
+        <label for="email">Email address</label>
+        <input type="text" placeholder="email@company.com">
+        <input type="submit" value="Subscribe to monthly newsletter">
+      </form>
+    </div>
+  </main>
 
-  Join 60,000+ product managers receiving monthly updates on:
 
-  Product discovery and building what matters
-  Measuring to ensure updates are a success
-  And much more!
-
-  Email address
-  email@company.com
-
-  Subscribe to monthly newsletter
-
-  <!-- Sign-up form end -->
-
-  <!-- Success message start -->
+<!-- 
+  Success message start
 
   Thanks for subscribing!
 
@@ -42,11 +54,11 @@
 
   Dismiss message
 
-  <!-- Success message end -->
+  Success message end
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>

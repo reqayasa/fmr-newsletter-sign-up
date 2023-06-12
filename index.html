@@ -35,9 +35,11 @@
         <li>And much more!</li>
       </ul>
 
-      <form action="">
-        <label for="email">Email address</label>
-        <input type="text" placeholder="email@company.com">
+      <form id="form" action="/" method="GET">
+        <div class="label">
+          <label for="email">Email address</label><span id="error"></span>
+        </div>
+        <input type="text" id="email" name="email" placeholder="email@company.com">
         <input type="submit" value="Subscribe to monthly newsletter">
       </form>
     </div>

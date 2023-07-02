@@ -15,7 +15,7 @@
 
 :root {
   --tomato: hsl(4, 100%, 67%);
-  --tomate-50: hsla(4, 100%, 67%, 0.5);
+  --tomato-50: hsla(4, 100%, 67%, 0.5);
   --dark-slate-grey: hsl(234, 29%, 20%);
   --charcoal-grey: hsl(235, 18%, 26%);
   --grey: hsl(231, 7%, 60%);
@@ -48,7 +48,6 @@ main {
   flex-direction: column;
 }
 
-/* Mobile FIrst */
 h1 {
   font-size: calc(39 / 16 * 1rem);
   padding-bottom: calc(26 / 16 * 1rem);
@@ -83,9 +82,11 @@ ul > li::before {
 }
 
 .content {
+  position: relative;
   margin-top: calc(45 / 16 * 1rem);
   margin-left: calc(26 / 16 * 1rem);
   margin-right: calc(26 / 16 * 1rem);
+  min-height: 90vh;
 }
 
 .content form {
@@ -118,26 +119,42 @@ ul > li::before {
 
 .content form input[type=text]:hover {
   transition: all 500 ease-out;
-  cursor: pointer;
+  color: var(--dark-slate-grey);
   border: 1px solid var(--dark-slate-grey);
 }
 
-.content form input[type=submit] {
-  padding-top: calc(17 / 16 * 1rem);
-  padding-bottom: calc(17 / 16 * 1rem);
-  background-color: var(--dark-slate-grey);
-  border: none;
-  border-radius: calc(6 / 16 * 1rem);
-  font-size: 1rem;
-  color: var(--white);
-  box-shadow: none;
+.content form input[type=text]:focus {
+  border: 1px solid var(--dark-slate-grey);
+  color: var(--dark-slate-grey);
 }
 
-.content form input[type=submit]:hover {
+.button {
+  padding-top: calc(17 / 16 * 1rem);
+  padding-bottom: calc(17 / 16 * 1rem);
+  margin-inline: auto;
+  background-color: var(--dark-slate-grey);
+  border: none;
+  width: 100%;
+  border-radius: calc(6 / 16 * 1rem);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  box-shadow: none;
+  text-align: center;
+  display: block;
+}
+
+.button:hover {
   background: linear-gradient(to left, hsl(15, 100%, 61%), hsl(346, 100%, 66%));
   cursor: pointer;
-  box-shadow: 0 0.25rem 0.5rem 0 var(--tomate-50);
+  box-shadow: 0 0.25rem 0.5rem 0 var(--tomato-50);
   transition: all 500 ease-out;
+}
+
+.stick-to-bottom {
+  position: absolute;
+  margin-top: auto;
+  bottom: 0;
 }
 
 .ilustration {
@@ -145,6 +162,15 @@ ul > li::before {
   background-repeat: no-repeat;
   background-size: cover;
   min-height: calc(284 / 16 * 1rem);
+}
+
+.image-success {
+  padding-top: calc(100 / 16 * 1rem);
+  padding-bottom: calc(40 / 16 * 1rem);
+}
+
+#email-text {
+  font-weight: 700;
 }
 
 @media screen and (min-width: calc(450 / 16 * 1rem)) {
@@ -169,6 +195,7 @@ ul > li::before {
     left: 50vw;
     top: 50vh;
     transform: translate(-50%, -50%);
+    box-shadow: 0 0.5rem 1.5rem 0 hsla(0, 0, 0, 0.2);
   }
   .ilustration {
     background-image: url("../assets/images/illustration-sign-up-desktop.svg");
@@ -182,10 +209,29 @@ ul > li::before {
   .content {
     order: 1;
     width:calc(450 / 16 * 1rem);
-    margin-top: calc(74 / 16 * 1rem);
+    margin-top: calc(25 / 16 * 1rem);
     margin-left: calc(39 / 16 * 1rem);
     margin-right: calc(64 / 16 * 1rem);
   }
-  
+
+  .suscces-message {
+    width: calc(505 / 16 * 1rem);;
+    height: calc(520 / 16 * 1rem);;
+  }
+
+  .suscces-message > .content > p {
+    padding-bottom: calc(46 / 16 * 1rem);;
+  }
+
+  .image-success {
+    padding-top: 0;
+    padding-bottom: calc(40 / 16 * 1rem);
+  }
+
+  .stick-to-bottom {
+    position: relative;
+    /* margin-top: auto; */
+    /* bottom: 0; */
+  }
 }
 

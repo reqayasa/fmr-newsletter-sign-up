@@ -181,6 +181,11 @@ ul > li::before {
 }
 
 @media screen and (min-width: calc(1000 / 16 * 1rem)) {
+  h1 {
+    font-size: calc(56 / 16 * 1rem);
+    letter-spacing: 0;
+    padding-top: calc(25 / 16 * 1rem);
+  }
   body {
     background-color: var(--dark-slate-grey);
   }
@@ -215,17 +220,20 @@ ul > li::before {
   }
 
   .suscces-message {
-    width: calc(505 / 16 * 1rem);;
-    height: calc(520 / 16 * 1rem);;
+    width: calc(505 / 16 * 1rem);
+    height: calc(520 / 16 * 1rem);
   }
 
   .suscces-message > .content > p {
-    padding-bottom: calc(46 / 16 * 1rem);;
+    padding-bottom: calc(40 / 16 * 1rem);
+  }
+  .suscces-message h1 {
+    padding-top: 0;
   }
 
   .image-success {
     padding-top: 0;
-    padding-bottom: calc(40 / 16 * 1rem);
+    padding-bottom: calc(35 / 16 * 1rem);
   }
 
   .stick-to-bottom {
